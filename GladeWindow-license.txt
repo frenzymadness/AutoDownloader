@@ -1,0 +1,94 @@
+GladeWindow is copyright 2002 by Dave Reed. It maybe used and distributed
+under the GNU GPL license with his permission. See the file COPYING for the
+text of the GNU GPL license. See below for the permission notice.
+
+Return-Path: <dreed@capital.edu>
+Received: from koko.hhs.nl ([145.52.2.16] verified)
+  by hhs.nl (CommuniGate Pro SMTP 4.3.6)
+  with ESMTP id 64427116 for j.w.r.degoede@hhs.nl; Mon, 16 Apr 2007 20:02:35 +0200
+Received: from exim by koko.hhs.nl with spam-scanned (Exim 4.62)
+	(envelope-from <dreed@capital.edu>)
+	id 1HdVX6-0001z2-Ao
+	for j.w.r.degoede@hhs.nl; Mon, 16 Apr 2007 20:02:35 +0200
+X-Spam-Checker-Version: SpamAssassin 3.1.8 (2007-02-13) on koko.hhs.nl
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.6 required=5.0 tests=BAYES_00 autolearn=ham
+	version=3.1.8
+Received: from exim (helo=koko)
+	by koko.hhs.nl with local-smtp (Exim 4.62)
+	(envelope-from <dreed@capital.edu>)
+	id 1HdVX6-0001yz-7E
+	for j.w.r.degoede@hhs.nl; Mon, 16 Apr 2007 20:02:32 +0200
+Received: from [192.153.31.82] (port=50429 helo=mail.capital.edu)
+	by koko.hhs.nl with esmtp (Exim 4.62)
+	(envelope-from <dreed@capital.edu>)
+	id 1HdVX5-0001yt-RH
+	for j.w.r.degoede@hhs.nl; Mon, 16 Apr 2007 20:02:32 +0200
+Received: from [205.133.110.175] ([205.133.110.175]) by mail.capital.edu with Microsoft SMTPSVC(6.0.3790.1830);
+	 Mon, 16 Apr 2007 14:02:31 -0400
+Mime-Version: 1.0 (Apple Message framework v624)
+In-Reply-To: <4623B53B.1060702@hhs.nl>
+References: <46230D47.6010101@hhs.nl> <49413b26772c46ab2c04d1dd99c49256@capital.edu> <4623B53B.1060702@hhs.nl>
+Content-Type: text/plain; charset=US-ASCII; format=flowed
+Message-Id: <7722b8e0b2edf5edb8505c7524555681@capital.edu>
+Content-Transfer-Encoding: 7bit
+From: David Reed <dreed@capital.edu>
+Subject: Re: GladeGen license
+Date: Mon, 16 Apr 2007 14:02:31 -0400
+To: Hans de Goede <j.w.r.degoede@hhs.nl>
+X-Mailer: Apple Mail (2.624)
+X-OriginalArrivalTime: 16 Apr 2007 18:02:31.0493 (UTC) FILETIME=[672B0F50:01C78051]
+X-Anti-Virus: Kaspersky Anti-Virus for MailServers 5.5.2/RELEASE, bases: 16042007 #280838, status: clean
+
+
+On Apr 16, 2007, at 1:41 PM, Hans de Goede wrote:
+
+> David Reed wrote:
+>> On Apr 16, 2007, at 1:44 AM, Hans de Goede wrote:
+>>> Hi David,
+>>>
+>>> Short intro: I'm a Computer science teacher at a Dutch university, 
+>>> and a FOSS enthousisast / developer. I've given 2 of my students an 
+>>> assignment to create a little tool which can be used to automate 
+>>> downloading of certain not 100% FOSS files which thus cannot be 
+>>> distributed with some Linux distros, but which are freely (and 
+>>> legally) available for download.
+>>>
+>>> I want to release this tool as opensource (GPL license), but I 
+>>> noticed that they have used your GladeGen code as part of the tool. 
+>>> This brings me to the following question: under which license may 
+>>> the GladeGen code be distributed?
+>>>
+>>> Regards,
+>>>
+>>> Hans
+>>>
+>> Hi Hans,
+>> Yes, the GladeGen source is under the GPL. If they just used GladeGen 
+>> to create their program it's not an issue. If they are including some 
+>> of the source from GladeGen then it would be, but if it's GPL, that's 
+>> fine.
+>> Dave
+>
+> Hi Dave,
+>
+> Thanks for the info, but doesn't the generated code always include 
+> some of the GladeGen code, as the generated source import's 
+> GladeWindow ?
+
+
+You're correct - I haven't looked at the code in a while and forgot 
+about that.
+
+> Notice that this is not a problem for me as the tool as a whole will 
+> be released under GPL.
+>
+
+I really should put some information about it on my webpage. I'm always 
+surprised at how many people (still) email me about it. I offered the 
+it to the glade developers to see if they wanted to include it w/ 
+glade, but I never heard back.
+
+Dave
+
+

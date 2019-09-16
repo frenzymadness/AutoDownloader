@@ -1,0 +1,37 @@
+[MESSAGELIST]
+[MESSAGE]
+	[TITLE]Please click 'Accept' to allow internet access.[/TITLE]
+	[TEXT]XU4 is a remake of the computer game Ultima IV. This game requires the original Ultima IV datafiles, which can be freely downloaded from the internet but may not be (re)distributed.
+
+Please click Accept to allow XU4 to access the internet to download the necessary datafiles.[/TEXT]
+[/MESSAGE]
+[MESSAGE]
+	[TITLE]License Information[/TITLE]
+	[TEXT]Ultima4 is released as Dragonware by Origin, this means that it may only be distributed by Ultima Dragons® through Ultima Dragons® websites.
+
+For the original permission notice from Origin for this see:
+http://martin.brenner.de/ultima/u4download.txt
+or:
+/usr/share/doc/xu4-1.0/u4download.txt[/TEXT]
+[/MESSAGE]
+[/MESSAGELIST]
+
+[FILELIST]
+[FILE]
+	[FILENAME]ultima4.zip[/FILENAME]
+	[MD5]5092e11579f2093bca2d67c1d1788c88[/MD5]
+	[PATH]$HOME/.xu4[/PATH]
+	[MIRRORS]
+		[URL]http://martin.brenner.de/ultima/ultima4.zip[/URL]
+		[URL]http://www.geocities.com/noble_tea/ultima4.zip[/URL]
+	[/MIRRORS]
+[/FILE]
+[FILE]
+	[FILENAME]u4upgrad.zip[/FILENAME]
+	[MD5]4ce9c9cd9dab111275e0ebfde7a482c4[/MD5]
+	[PATH]$HOME/.xu4[/PATH]
+	[MIRRORS]
+		[URL]http://www.moongates.com/u4/upgrade/files/u4upgrad.zip[/URL]
+	[/MIRRORS]
+[/FILE]
+[/FILELIST]

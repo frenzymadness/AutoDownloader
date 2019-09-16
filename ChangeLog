@@ -1,0 +1,51 @@
+autodownloader-0.3.0
+--------------------
+* Sun Jun  1 2008
+- Add icons made by Michael Beckwith, thanks Michael!
+
+* Thu Dec 13 2007
+- Add 2 more patches from Ivo Manca:
+  * Make ask to start configurable
+  * Some trailing whitespace cleanups
+
+* Thu Nov 29 2007
+- Apply patch from Ivo Manca fixing the downloading of files with an
+  unknown size, thanks!
+
+* Thu Oct  4 2007
+- Check if files exist (and have the correct md5sum) from a previous download
+  and skip downloading them (redhat bz 309381)
+
+* Wed May 16 2007
+- Make the timeout for stalled mirror detection larger, this fixes the use of
+  autodownloader for those with slow links
+
+
+autodownloader-0.2.0
+--------------------
+-Reworked version by Hans de Goede, changes:
+-add support for passing config file name through cmdline
+-add support for using environment variables in the config file
+-change the hardcoded Accept internet connection and Accept license windows,
+ to a list of Message windows, which is configured through the config file
+-return status other then 0 when download failed / was cancelled, or when the
+ user clicked quit at the success window
+-change reader.read_setting() to only take one param instead of 2 and let it
+ construct the closing tag itself
+-use one uniform window delete event handler for all window delete events
+-directly download to destdir instead of doing a move afterward, get rid of
+ copying dialog
+-use mkstemp to create the check file to feed to "md5sum" instead of using a
+ hardcoded check.txt. Now autodownloader no longer depends on being started
+ from a dir to which it can (safely) write
+-Remove EXEC setting from configfile, instead of executing the program for
+ which we are downloading ourself, report a proper status to the caller and
+ let the caller do any necessary execution. Returned exit statuses:
+ 0: download success, start program
+ 1: download failed or cancelled
+ 2: download success, but user has choosen to not to continue with
+    starting the program
+
+autodownloader-0.1.0
+--------------------
+-Initial version by Robbert Gorter, Maurice van de Klundert, Mark de Vries
