@@ -22,7 +22,6 @@
 from __future__ import print_function
 import sys, string, socket, os, re, tempfile
 from six.moves.urllib import request
-import os
 import gi
 
 gi.require_version("Gtk", "3.0")
