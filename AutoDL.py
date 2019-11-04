@@ -241,7 +241,7 @@ class Downloader:
 
 	def md5_check(self, filename, md5):
 		(fd, fname) = tempfile.mkstemp()
-		fs = os.fdopen(fd, "w+b")
+		fs = os.fdopen(fd, "w")
 		fs.write(md5 + "  " + filename)
 		fs.close()
 
