@@ -1,6 +1,8 @@
 install:
 	mkdir -p $(DESTDIR)/usr/share/autodl
 	install -p -m 755 AutoDL.py $(DESTDIR)/usr/share/autodl
+	mkdir -p $(DESTDIR)/usr/bin
+	ln -s ../share/autodl/AutoDL.py $(DESTDIR)/usr/bin/autodl
 	install -p -m 644 autodl.ui $(DESTDIR)/usr/share/autodl
 	mkdir -p $(DESTDIR)/usr/share/icons/hicolor/16x16/apps
 	mkdir -p $(DESTDIR)/usr/share/icons/hicolor/32x32/apps
