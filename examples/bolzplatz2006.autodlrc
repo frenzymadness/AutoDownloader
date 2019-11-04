@@ -1,0 +1,64 @@
+[MESSAGELIST]
+[MESSAGE]
+	[TITLE]Please click 'Accept' to allow internet access.[/TITLE]
+	[TEXT]In order to play bolzplatz / slamsoccer 2006, the bolzplatz2006 data files are needed.
+
+These files are not included in Fedora because they are licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.5 License, which contains a no commercial use clause. These files can be freely downloaded from the internet.
+
+If you click Accept the necessary files will be automatically downloaded and installed for you.
+
+Please click Accept to allow access to the internet to download the necessary datafiles.[/TEXT]
+[/MESSAGE]
+[MESSAGE]
+	[TITLE]License Information[/TITLE]
+	[TEXT]Attribution-NonCommercial-ShareAlike 2.5 License
+
+You are free:
+
+ * to Share — to copy, distribute and transmit
+   the work
+ * to Remix — to adapt the work
+
+Under the following conditions:
+
+ * Attribution. You must attribute the work in the
+   manner specified by the author or licensor (but
+   not in any way that suggests that they endorse
+   you or your use of the work).
+ * Noncommercial. You may not use this work for
+   commercial purposes.
+ * Share Alike. If you alter, transform, or build
+   upon this work, you may distribute the resulting
+   work only under the same or similar license to
+   this one.
+
+ * For any reuse or distribution, you must make clear
+   to others the license terms of this work. The best
+   way to do this is with a link to this web page.
+ * Any of the above conditions can be waived if you
+   get permission from the copyright holder.
+ * Nothing in this license impairs or restricts the
+   author's moral rights.
+
+Disclaimer
+
+Your fair dealing and other rights are in no way affected by the above.
+
+This is a human-readable summary of the Legal Code (the full license), which is available here:
+http://creativecommons.org/licenses/by-nc-sa/2.5/legalcode
+[/TEXT]
+[/MESSAGE]
+[/MESSAGELIST]
+
+[FILELIST]
+[FILE]
+	[FILENAME]bolzplatz2006-1.0.3-linux.tar.gz[/FILENAME]
+	[MD5]6cac1e95dd6f2deebbf33941c78c6ed8[/MD5]
+	[PATH]$HOME/.bolzplatz2006[/PATH]
+	[MIRRORS]
+		[URL]http://downloads.sourceforge.net/bp2k6/bolzplatz2006-1.0.3-linux.tar.gz[/URL]
+		[URL]http://downloads.sourceforge.net/bp2k6/bolzplatz2006-1.0.3-linux.tar.gz[/URL]
+		[URL]http://downloads.sourceforge.net/bp2k6/bolzplatz2006-1.0.3-linux.tar.gz[/URL]
+	[/MIRRORS]
+[/FILE]
+[/FILELIST]

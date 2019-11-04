@@ -1,0 +1,111 @@
+[MESSAGELIST]
+[MESSAGE]
+	[TITLE]Please click 'Accept' to allow internet access.[/TITLE]
+	[TEXT]In order to play Ur-Quan Masters, the uqm data files are needed.
+
+These files are not included in Fedora because they are licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.5 License, which contains a no commercial use clause. These files can be freely downloaded from the internet.
+
+If you click Accept the necessary files will be automatically downloaded and installed for you.
+
+Please click Accept to allow access to the internet to download the necessary datafiles.[/TEXT]
+[/MESSAGE]
+[MESSAGE]
+	[TITLE]License Information[/TITLE]
+	[TEXT]Attribution-NonCommercial-ShareAlike 2.5 License
+
+You are free:
+
+ * to Share — to copy, distribute and transmit
+   the work
+ * to Remix — to adapt the work
+
+Under the following conditions:
+
+ * Attribution. You must attribute the work in the
+   manner specified by the author or licensor (but
+   not in any way that suggests that they endorse
+   you or your use of the work).
+ * Noncommercial. You may not use this work for
+   commercial purposes.
+ * Share Alike. If you alter, transform, or build
+   upon this work, you may distribute the resulting
+   work only under the same or similar license to
+   this one.
+
+ * For any reuse or distribution, you must make clear
+   to others the license terms of this work. The best
+   way to do this is with a link to this web page.
+ * Any of the above conditions can be waived if you
+   get permission from the copyright holder.
+ * Nothing in this license impairs or restricts the
+   author's moral rights.
+
+Disclaimer
+
+Your fair dealing and other rights are in no way affected by the above.
+
+This is a human-readable summary of the Legal Code (the full license), which is available here:
+http://creativecommons.org/licenses/by-nc-sa/2.5/legalcode
+[/TEXT]
+[/MESSAGE]
+[/MESSAGELIST]
+
+[FILELIST]
+[FILE]
+	[FILENAME]uqm-0.7.0-content.uqm[/FILENAME]
+	[MD5]2f36dcb15274dbbcb5e266f2ed84d5b2[/MD5]
+	[PATH]$HOME/.uqm/content/packages[/PATH]
+	[MIRRORS]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-content.uqm/download[/URL]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-content.uqm/download[/URL]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-content.uqm/download[/URL]
+	[/MIRRORS]
+[/FILE]
+[FILE]
+	[FILENAME]uqm-0.7.0-voice.uqm[/FILENAME]
+	[MD5]b78e0606325810f9f2e9ec786191c01b[/MD5]
+	[PATH]$HOME/.uqm/content/addons[/PATH]
+	[MIRRORS]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-voice.uqm/download[/URL]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-voice.uqm/download[/URL]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-voice.uqm/download[/URL]
+	[/MIRRORS]
+[/FILE]
+[FILE]
+	[FILENAME]uqm-0.7.0-3domusic.uqm[/FILENAME]
+	[MD5]86a5e376d9b76888add1d10818f0ab9f[/MD5]
+	[PATH]$HOME/.uqm/content/addons[/PATH]
+	[MIRRORS]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-3domusic.uqm/download[/URL]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-3domusic.uqm/download[/URL]
+		[URL]http://sourceforge.net/projects/sc2/files/UQM/0.7/uqm-0.7.0-3domusic.uqm/download[/URL]
+	[/MIRRORS]
+[/FILE]
+[FILE]
+	[FILENAME]uqm-remix-pack1.uqm[/FILENAME]
+	[MD5]09f242d8d72166d1d5ccbd3d99c93e7d[/MD5]
+	[PATH]$HOME/.uqm/content/addons[/PATH]
+	[MIRRORS]
+		[URL]http://prdownloads.sourceforge.net/sc2/uqm-remix-disc1.uqm?download[/URL]
+	[/MIRRORS]
+[/FILE]
+[FILE]
+	[FILENAME]uqm-remix-pack2.uqm[/FILENAME]
+	[MD5]fbc8bdcb709939d559d8c7216ad15cc2[/MD5]
+	[PATH]$HOME/.uqm/content/addons[/PATH]
+	[MIRRORS]
+		[URL]http://prdownloads.sourceforge.net/sc2/uqm-remix-disc2.uqm?download[/URL]
+	[/MIRRORS]
+[/FILE]
+[FILE]
+	[FILENAME]uqm-remix-pack3.uqm[/FILENAME]
+	[MD5]5ccc6d4ac301ae98e172ac6835dcdead[/MD5]
+	[PATH]$HOME/.uqm/content/addons[/PATH]
+	[MIRRORS]
+		[URL]http://prdownloads.sourceforge.net/sc2/uqm-remix-disc3.uqm?download[/URL]
+	[/MIRRORS]
+[/FILE]
+
+
+
+[/FILELIST]
