@@ -1,3 +1,17 @@
+autodownloader-0.5.0
+--------------------
+* Tue Nov  5 2019
+- Refactoring
+- Removed GladeWindow.py
+
+autodownloader-0.4.0
+--------------------
+* Mon Nov  4 2019
+- Python 3 & GTK 3 compatibility
+- Switched from Glade to GTK Builder
+- Added clean script for testing
+- Multiple examples from packages in Fedora Linux
+
 autodownloader-0.3.0
 --------------------
 * Sun Jun  1 2008

@@ -22,8 +22,10 @@
 from __future__ import print_function
 import sys, string, socket, os, re, tempfile
 from six.moves.urllib import request
-
-from GladeWindow import *
+import os
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
 
 #overview of the settings dictionary used in class AutoDL
 #key		contains
@@ -302,7 +304,7 @@ class Downloader:
 #----------------------------------------------------------------------
 # GUI class
 #----------------------------------------------------------------------
-class AutoDL(GladeWindow):
+class AutoDL(object):
 
 
 	#----------------------------------------------------------------------
@@ -316,11 +318,13 @@ class AutoDL(GladeWindow):
 		self.init()
 
 	def init(self):
-		#open glade file
 		filename = '/usr/share/autodl/autodl.ui'
 
 		if not os.path.isfile(filename):
 			filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "autodl.ui")
+
+		self.builder = Gtk.Builder()
+		self.builder.add_from_file(filename)
 
 		widget_list = [
 			'AcceptWindow',
@@ -347,6 +351,10 @@ class AutoDL(GladeWindow):
 			'message_title_label'
 		]
 
+		self.widgets = {}
+		for w in widget_list:
+			self.widgets[w] = self.builder.get_object(w)
+
 		handlers = [
 			'on_button_accept_yes_clicked',
 			'on_button_md5_yes_clicked',
@@ -357,22 +365,22 @@ class AutoDL(GladeWindow):
 			'on_unclean_exit_event',
 		]
 
-		if self.error_logger.flag():
-			top_window = 'ErrorWindow'
-			GladeWindow.__init__(self, filename, top_window, widget_list, handlers)
+		self.cb_dict = {}
+		for f in handlers:
+			self.cb_dict[f] = getattr(self, f)
+		self.builder.connect_signals(self.cb_dict)
 
-			textbuffer = Gtk.TextBuffer()
-			iter = textbuffer.get_start_iter()
+		textbuffer = Gtk.TextBuffer()
+		iter = textbuffer.get_start_iter()
+
+		if self.error_logger.flag():
+			self.top_window = self.builder.get_object('ErrorWindow')
 
 			textbuffer.insert (iter, self.error_logger.get_log())
 
 			self.widgets['textview3'].set_buffer(textbuffer)
 		else:
-			top_window = 'AcceptWindow'
-			GladeWindow.__init__(self, filename, top_window, widget_list, handlers)
-
-			textbuffer = Gtk.TextBuffer()
-			iter = textbuffer.get_start_iter()
+			self.top_window = self.builder.get_object('AcceptWindow')
 
 			textbuffer.insert(iter, self.settings['messagelist'][0]['text'])
 
@@ -396,6 +404,30 @@ class AutoDL(GladeWindow):
 	def refresh(self):
 		while Gtk.events_pending():
 			Gtk.main_iteration()
+	
+	#----------------------------------------------------------------------
+
+	def show(self):
+
+		'''
+		display the top_window widget
+		'''
+
+		self.top_window.set_position(Gtk.WindowPosition.CENTER_ALWAYS)
+		self.top_window.show()
+
+	#----------------------------------------------------------------------
+
+	def set_top_window(self, top_window):
+
+		'''set_top_window(self, top_window):
+
+		notebook pages that are in containers need to be able to change
+		their top window, especially so the dialog is set_transient_for
+		the actual main window
+		'''
+		
+		self.top_window = top_window
 
 	#----------------------------------------------------------------------
 
