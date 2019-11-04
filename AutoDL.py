@@ -610,7 +610,7 @@ def initialise_program(error_logger, ini_file):
         settings["messagelist"] = reader.read_messagelist(content)
         settings["filelist"] = reader.read_filelist(content)
         try:
-            settings["ask_to_start"] = ask_to_start = reader.read_setting(
+            settings["ask_to_start"] = reader.read_setting(
                 content, "[ASK_TO_START]"
             )
         except:
