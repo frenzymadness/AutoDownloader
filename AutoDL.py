@@ -110,13 +110,13 @@ class Reader:
 		find_index_start = 0
 		find_index_end = 0
 
-		find_index_start = string.find(content, first_tag)
+		find_index_start = content.find(first_tag)
 		if find_index_start == -1:
 			raise Missing_tag(first_tag)
 
 		low_index = find_index_start + offset
 
-		find_index_end = string.find(content, last_tag)
+		find_index_end = content.find(last_tag)
 		if find_index_end == -1:
 			raise Missing_tag(last_tag)
 
@@ -136,12 +136,12 @@ class Reader:
 
 		message_list = []
 
-		message_boundary_low = string.find(content, '[MESSAGE]')
+		message_boundary_low = content.find('[MESSAGE]')
 		if message_boundary_low == -1:
 			raise Missing_tag('[MESSAGE]')
 
 		while message_boundary_low != -1:
-			message_boundary_high = string.find(content, '[/MESSAGE]', message_boundary_low)
+			message_boundary_high = content.find('[/MESSAGE]', message_boundary_low)
 			if message_boundary_high == -1:
 				raise Missing_tag('[/MESSAGE]')
 
@@ -152,7 +152,7 @@ class Reader:
 
 			message_record = { 'title': title, 'text': text }
 			message_list.append(message_record)
-			message_boundary_low = string.find(content, '[MESSAGE]', message_boundary_high)
+			message_boundary_low = content.find('[MESSAGE]', message_boundary_high)
 
 		return message_list
 	
@@ -160,12 +160,12 @@ class Reader:
 
 		file_list = []
 
-		file_boundary_low = string.find(content, '[FILE]')
+		file_boundary_low = content.find('[FILE]')
 		if file_boundary_low == -1:
 			raise Missing_tag('[FILE]')
 
 		while file_boundary_low != -1:
-			file_boundary_high = string.find(content, '[/FILE]', file_boundary_low)
+			file_boundary_high = content.find('[/FILE]', file_boundary_low)
 			if file_boundary_high == -1:
 				raise Missing_tag('[/FILE]')
 
@@ -181,7 +181,7 @@ class Reader:
 			file_record = { 'filename': filename, 'md5': md5, 'path': path, 'urllist': url_list }
 			file_list.append(file_record)
 
-			file_boundary_low = string.find(content, '[FILE]', file_boundary_high)
+			file_boundary_low = content.find('[FILE]', file_boundary_high)
 
 		return file_list
 
@@ -189,18 +189,18 @@ class Reader:
 
 		url_list = []
 
-		url_boundary_low = string.find(content, '[URL]')
+		url_boundary_low = content.find('[URL]')
 		if url_boundary_low == -1:
 			raise Missing_tag('[URL]')
 
 		while url_boundary_low !=-1:
 			url_boundary_low += len('[URL]')
-			url_boundary_high = string.find(content, '[/URL]', url_boundary_low)
+			url_boundary_high = content.find('[/URL]', url_boundary_low)
 			if url_boundary_high == -1:
 				raise Missing_tag('[/URL]')
 
 			url_list.append(content[url_boundary_low:url_boundary_high].strip())
-			url_boundary_low = string.find(content, '[URL]', url_boundary_high)
+			url_boundary_low = content.find('[URL]', url_boundary_high)
 
 		return url_list
 #----------------------------------------------------------------------
