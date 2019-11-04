@@ -74,24 +74,25 @@ class GladeWindow(object):
             search_path = './'
 
         fname = search_file(filename, search_path)
-        self.xml = gtk.glade.XML(fname)
+        self.builder = Gtk.Builder()
+        self.builder.add_from_file("autodl.ui")  # TODO Fix this!
 
         # connect callbacks
         self.cb_dict = {}
         for f in handlers:
             self.cb_dict[f] = getattr(self, f)
-        self.xml.signal_autoconnect(self.cb_dict)
+        self.builder.connect_signals(self.cb_dict)
 
         self.widgets = {}
         for w in self.widget_list:
-            self.widgets[w] = self.xml.get_widget(w)
+            self.widgets[w] = self.builder.get_object(w)
 
         if pull_down_dict is not None:
             for w, l in pull_down_dict.items():
                 self.widgets[w].set_popdown_strings(l)
             
         # set attribute for top_window so it can be accessed as self.top_window
-        self.top_window = self.xml.get_widget(top_window)
+        self.top_window = self.builder.get_object(top_window)
 
         # window to show when this one is hidden
         self.prev_window = None
