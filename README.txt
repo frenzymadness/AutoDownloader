@@ -1,3 +1,19 @@
+WARNING
+=======
+
+This is a clone of original Autodownloader from SourceForge: https://sourceforge.net/projects/autodownloader/
+
+This software is not maintained for a long time but still kinda useful so I
+decided to fork it and make it compatible with GTK3 and both Python 2 and 3.
+
+Because the user interface is converted from Glade to GTK builder UI,
+the source code would need a lot of love and refactoring but I don't have time
+to do it. It works as-is.
+
+Feel free to open an issue or send a pull request if you find any bug.
+
+Following is the original Readme:
+
 Autodownloader README
 =====================
 Version 0.2
