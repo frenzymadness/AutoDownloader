@@ -468,7 +468,7 @@ class AutoDL(GladeWindow):
 		self.downloader = Downloader(self)
 		try:
 			self.downloader.download(self.settings['filelist'])
-		except Download_failed, inst:
+		except Download_failed as inst:
 			self.set_top_window(self.widgets['ErrorWindow'])
 			self.show()
 
@@ -478,7 +478,7 @@ class AutoDL(GladeWindow):
 			textbuffer.insert (iter, inst.value)
 
 			self.widgets['textview3'].set_buffer(textbuffer)
-		except Download_stopped_by_user, inst:
+		except Download_stopped_by_user as inst:
 			self.set_top_window(self.widgets['ErrorWindow'])
 			self.show()
 
@@ -551,7 +551,7 @@ def initialise_program(error_logger, ini_file):
 			pass
 	except IOError:
 		error_logger.report_error('Error: ' + ini_file +' does not exist.\n')
-	except (Missing_tag, Wrong_tag), inst:
+	except (Missing_tag, Wrong_tag) as inst:
 		error_logger.report_error(inst.value)
 	except:
 		error_logger.report_error( 'Unexpected error.\n' )
