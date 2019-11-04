@@ -1,7 +1,7 @@
 install:
 	mkdir -p $(DESTDIR)/usr/share/autodl
 	install -p -m 755 AutoDL.py $(DESTDIR)/usr/share/autodl
-	install -p -m 644 GladeWindow.py autodl.glade $(DESTDIR)/usr/share/autodl
+	install -p -m 644 GladeWindow.py autodl.ui $(DESTDIR)/usr/share/autodl
 	mkdir -p $(DESTDIR)/usr/share/icons/hicolor/16x16/apps
 	mkdir -p $(DESTDIR)/usr/share/icons/hicolor/32x32/apps
 	mkdir -p $(DESTDIR)/usr/share/icons/hicolor/64x64/apps
