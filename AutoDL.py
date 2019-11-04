@@ -19,6 +19,7 @@
 #    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #----------------------------------------------------------------------
 
+from __future__ import print_function
 import sys, string, urllib, socket, os, re, tempfile
 
 from GladeWindow import *
@@ -565,7 +566,7 @@ def initialise_program(error_logger, ini_file):
 #----------------------------------------------------------------------
 def main(argv):
 	if len(argv) != 2:
-		print 'Usage: ' + argv[0] + ' <autodl-configuration-file>'
+		print('Usage: ' + argv[0] + ' <autodl-configuration-file>')
 		exit(1)
 
 	error_logger=Error_logger()
