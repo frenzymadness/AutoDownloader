@@ -3,6 +3,7 @@ autodownloader-0.5.0
 * Tue Nov  5 2019
 - Refactoring
 - Removed GladeWindow.py
+- Source code reformated using Black
 
 autodownloader-0.4.0
 --------------------
