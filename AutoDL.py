@@ -317,7 +317,10 @@ class AutoDL(GladeWindow):
 
 	def init(self):
 		#open glade file
-		filename = '/usr/share/autodl/autodl.glade'
+		filename = '/usr/share/autodl/autodl.ui'
+
+		if not os.path.isfile(filename):
+			filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "autodl.ui")
 
 		widget_list = [
 			'AcceptWindow',

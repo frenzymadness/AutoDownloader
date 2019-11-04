@@ -39,25 +39,13 @@ class GladeWindow(object):
     __init__ method needs to call GladeWindow.__init__; callbacks that
     start with on_ are automatically connected'''
 
-    #----------------------------------------------------------------------
-
-    def set_search_path(cls, path):
-
-        '''set the search path for looking for the .glade files'''
-
-        cls.search_path = path
-
-    set_search_path = classmethod(set_search_path)
-
-    #----------------------------------------------------------------------
-
     def __init__(self, filename, top_window, widget_list, handlers,
                  pull_down_dict=None):
 
         '''
         __init__(self, filename, top_window, widget_list, pull_down_dict=None):
 
-        filename: filename of the .glade file
+        filename: filename of the .ui file
         top_window: the glade name of the top level widget (this will then
            be accessible as self.top_window)
         widget_list: a list of glade names; the dictionary self.widgets
@@ -68,14 +56,8 @@ class GladeWindow(object):
         
         self.widget_list = widget_list
 
-        try:
-            search_path = GladeWindow.search_path
-        except:
-            search_path = './'
-
-        fname = search_file(filename, search_path)
         self.builder = Gtk.Builder()
-        self.builder.add_from_file("autodl.ui")  # TODO Fix this!
+        self.builder.add_from_file(filename)
 
         # connect callbacks
         self.cb_dict = {}
