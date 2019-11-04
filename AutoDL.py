@@ -20,7 +20,8 @@
 #----------------------------------------------------------------------
 
 from __future__ import print_function
-import sys, string, urllib, socket, os, re, tempfile
+import sys, string, socket, os, re, tempfile
+from six.moves.urllib import request
 
 from GladeWindow import *
 
@@ -271,7 +272,7 @@ class Downloader:
 				if not os.path.exists(x['path']):
 					os.makedirs(x['path'])
 				try:
-					urllib.urlretrieve(x['urllist'][self.mirror_count],
+					request.urlretrieve(x['urllist'][self.mirror_count],
 						x['path'] + '/' + x['filename'],
 						self.progress)
 				except IOError:
