@@ -357,7 +357,7 @@ class AutoDL(GladeWindow):
 			top_window = 'ErrorWindow'
 			GladeWindow.__init__(self, filename, top_window, widget_list, handlers)
 
-			textbuffer = gtk.TextBuffer()
+			textbuffer = Gtk.TextBuffer()
 			iter = textbuffer.get_start_iter()
 
 			textbuffer.insert (iter, self.error_logger.get_log())
@@ -367,7 +367,7 @@ class AutoDL(GladeWindow):
 			top_window = 'AcceptWindow'
 			GladeWindow.__init__(self, filename, top_window, widget_list, handlers)
 
-			textbuffer = gtk.TextBuffer()
+			textbuffer = Gtk.TextBuffer()
 			iter = textbuffer.get_start_iter()
 
 			textbuffer.insert(iter, self.settings['messagelist'][0]['text'])
@@ -390,8 +390,8 @@ class AutoDL(GladeWindow):
 	#----------------------------------------------------------------------
 
 	def refresh(self):
-		while gtk.events_pending():
-			gtk.main_iteration(False)
+		while Gtk.events_pending():
+			Gtk.main_iteration()
 
 	#----------------------------------------------------------------------
 
@@ -454,7 +454,7 @@ class AutoDL(GladeWindow):
 	def on_button_accept_yes_clicked(self, *args):
 		self.settings['messagelist'] = self.settings['messagelist'][1:]
 		if len(self.settings['messagelist']):
-			textbuffer = gtk.TextBuffer()
+			textbuffer = Gtk.TextBuffer()
 			iter = textbuffer.get_start_iter()
 			textbuffer.insert (iter, self.settings['messagelist'][0]['text'])
 			self.widgets['message_textview'].set_buffer(textbuffer)
@@ -473,7 +473,7 @@ class AutoDL(GladeWindow):
 			self.set_top_window(self.widgets['ErrorWindow'])
 			self.show()
 
-			textbuffer = gtk.TextBuffer()
+			textbuffer = Gtk.TextBuffer()
 			iter = textbuffer.get_start_iter()
 
 			textbuffer.insert (iter, inst.value)
@@ -483,7 +483,7 @@ class AutoDL(GladeWindow):
 			self.set_top_window(self.widgets['ErrorWindow'])
 			self.show()
 
-			textbuffer = gtk.TextBuffer()
+			textbuffer = Gtk.TextBuffer()
 			iter = textbuffer.get_start_iter()
 
 			textbuffer.insert (iter, inst.value)
@@ -497,7 +497,7 @@ class AutoDL(GladeWindow):
 			self.set_top_window(self.widgets['ErrorWindow'])
 			self.show()
 
-			textbuffer = gtk.TextBuffer()
+			textbuffer = Gtk.TextBuffer()
 			iter = textbuffer.get_start_iter()
 
 			textbuffer.insert (iter, 'Unexpected error while downloading')
@@ -506,7 +506,7 @@ class AutoDL(GladeWindow):
 			raise
 		else:
 			if 'ask_to_start' in self.settings and self.settings['ask_to_start'] == "FALSE":
-				gtk.main_quit();
+				Gtk.main_quit();
 			else:
 				self.set_top_window(self.widgets['SuccessWindow'])
 				self.widgets['DownloadWindow'].hide()
@@ -525,7 +525,7 @@ class AutoDL(GladeWindow):
 	#----------------------------------------------------------------------  
 
 	def on_button_success_yes_clicked(self, *args):
-		gtk.main_quit()
+		Gtk.main_quit()
 
 	#----------------------------------------------------------------------
 
@@ -574,7 +574,7 @@ def main(argv):
 
 	w = AutoDL(settings, error_logger)
 	w.show()
-	gtk.main()
+	Gtk.main()
 
 if __name__ == '__main__':
 	main(sys.argv)

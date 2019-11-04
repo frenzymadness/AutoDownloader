@@ -5,8 +5,10 @@
 #----------------------------------------------------------------------
 
 import os
-import gtk
-import gtk.glade
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+
 
 #----------------------------------------------------------------------
 
@@ -135,9 +137,9 @@ class GladeWindow(object):
         if prev_window is not None:
             self.prev_window = prev_window
         if center:
-            self.top_window.set_position(gtk.WIN_POS_CENTER_ALWAYS)
+            self.top_window.set_position(Gtk.WindowPosition.CENTER_ALWAYS)
         else:
-            self.top_window.set_position(gtk.WIN_POS_NONE)
+            self.top_window.set_position(Gtk.WindowPosition.NONE)
         self.top_window.show()
 
     #----------------------------------------------------------------------
@@ -157,6 +159,6 @@ class GladeWindow(object):
         if self.cb_func is not None:
             self.cb_func(*self.cb_args, **self.cb_kwargs)
         if self.prev_window is None:
-            gtk.main_quit()
+            Gtk.main_quit()
             
 #----------------------------------------------------------------------
