@@ -264,7 +264,6 @@
             <property name="width_request">378</property>
             <property name="height_request">24</property>
             <property name="visible">True</property>
-            <property name="orientation">GTK_PROGRESS_LEFT_TO_RIGHT</property>
             <property name="fraction">0</property>
             <property name="pulse_step">0.00999999977648</property>
             <property name="text" translatable="yes">0%</property>
